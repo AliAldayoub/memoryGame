@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="pageLoad()">
+    <div class="overlay">
+        <input type="text" placeholder="Enter Your Name">
+        <button>Lets Get Start</button>
+        <p class="note">Note: max player is 5</p>
+
+    </div>
+    <div class="overlayImage">
+        <p id="webDev">Web Development Images</p>
+        <p id="players"> Football Player Images</p>
+        <p id="Fruits">Fruits Images</p>
+        <p id="CardNumber">Card Number Image</p>
+        <p>Note: PLease Press Start Game if First Time Otherwise Reset After Choose</p>
+    </div>
+    <div class="memory-game">
+        <div class="img-blocks">
+            <div class="block" data-tech="angular">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/angular.png" alt="angular">
+                </div>
+            </div>
+            <div class="block" data-tech="angular">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/angular.png" alt="angular">
+                </div>
+            </div>
+            <div class="block" data-tech="css">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/css.png" alt="css">
+                </div>
+            </div>
+            <div class="block" data-tech="css">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/css.png" alt="css">
+                </div>
+            </div>
+            <div class="block" data-tech="html">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/html.png" alt="html">
+                </div>
+            </div>
+            <div class="block" data-tech="html">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/html.png" alt="html">
+                </div>
+            </div>
+            <div class="block" data-tech="jquery">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/jquery.png" alt="jquery">
+                </div>
+            </div>
+            <div class="block" data-tech="jquery">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/jquery.png" alt="jquery">
+                </div>
+            </div>
+            <div class="block" data-tech="js">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/js.png" alt="js">
+                </div>
+            </div>
+            <div class="block" data-tech="js">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/js.png" alt="js">
+                </div>
+            </div>
+            <div class="block" data-tech="php">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/php.png" alt="php">
+                </div>
+            </div>
+            <div class="block" data-tech="php">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/php.png" alt="php">
+                </div>
+            </div>
+            <div class="block" data-tech="react">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/react.png" alt="react">
+                </div>
+            </div>
+            <div class="block" data-tech="react">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/react.png" alt="react">
+                </div>
+            </div>
+            <div class="block" data-tech="sass">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/sass.png" alt="sass">
+                </div>
+            </div>
+            <div class="block" data-tech="sass">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/sass.png" alt="sass">
+                </div>
+            </div>
+            <div class="block" data-tech="vue">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/vue.png" alt="vue">
+                </div>
+            </div>
+            <div class="block" data-tech="vue">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/vue.png" alt="vue">
+                </div>
+            </div>
+            <div class="block" data-tech="wordpress">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/wordpress.png" alt="wordpress">
+                </div>
+            </div>
+            <div class="block" data-tech="wordpress">
+                <div class="face front">
+                    <p>!</p>
+                </div>
+                <div class="face back">
+                    <img src="images/wordpress.png" alt="wordpress">
+                </div>
+            </div>
+        </div>
+        <div class="score">
+            <p>Welcome <span class="name">Default</span></p>
+
+            <div class="try">
+                <p>Your Tries :</p>
+                <p class="tries">0</p>
+            </div>
+            <div class="timer">
+                <p>
+                    TIME &nbsp;&nbsp;
+                    <span class="minTwo">0</span>
+                    <span class="minOne">0</span>
+                    :
+                    <span class="secTwo">0</span>
+                    <span class="secOne">0</span>
+                </p>
+            </div>
+            <div class="buttons">
+                <button class="start">Start Game</button>
+                <button class="Reset">Reset</button>
+            </div>
+            <div class="storge">
+            </div>
+            <div class="newPlayer">New Player?</div>
+            <div class="difrrentImg">difrrent Image ?<br> press to choose </div>
+        </div>
+    </div>
+
+    <audio id="success" src="success.wav" preload="auto"></audio>
+    <audio id="wrong" src="wrong.wav" preload="auto"></audio>
+    <audio id="bgSound" src="bgSound.mp3" preload="auto" loop></audio>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
