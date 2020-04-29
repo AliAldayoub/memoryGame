@@ -267,16 +267,14 @@ body {
 	.memory-game {
 		flex-direction: column;
 	}
-	.score {
-		width: 100%;
-	}
+
 	.img-blocks {
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 	}
 	.block {
-		height: 120px;
+		height: 70px;
 	}
 	.overlayImage {
 		position: fixed;
@@ -310,10 +308,40 @@ body {
 		background-color: #f00;
 		width: 90%;
 		color: #fff;
-		font-size: 24px;
+		font-size: 17px;
 		pointer-events: none;
 	}
 	.note {
-		width: 70%;
+		width: 90%;
+	}
+	.overlay input {
+		width: 300px;
+		font-size: 13px;
+	}
+	.overlay button {
+		width: 180px;
+	}
+	.score {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+	}
+	.buttons {
+		width: 100%;
+		margin: 10px;
+	}
+	.buttons button {
+	}
+	.score div.try {
+		margin-top: 10px;
+	}
+	.score .timer {
+		margin: 10px auto;
+	}
+	.score div.try p.tries {
+		padding: 8px 50px;
+		margin-left: 10px;
 	}
 }
