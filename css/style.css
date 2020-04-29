@@ -50,7 +50,10 @@ body {
 	transform: rotateY(180deg);
 }
 .back img {
-	width: 55%;
+	width: 65%;
+}
+.back img.players {
+	width: 75%;
 }
 .score {
 	border: 2px solid rgb(143, 49, 206);

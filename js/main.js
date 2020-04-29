@@ -23,26 +23,26 @@ let triesCounter = 0,
 	playerCounter = 0;
 
 const Fruits = [
-		'apple-min.png',
-		'apple-min.png',
+		'apple.png',
+		'apple.png',
 		'banana.png',
 		'banana.png',
-		'grapes-min.jpg',
-		'grapes-min.jpg',
-		'kiwi-min.png',
-		'kiwi-min.png',
-		'orange-min.png',
-		'orange-min.png',
+		'grapes.png',
+		'grapes.png',
+		'kiwi.png',
+		'kiwi.png',
+		'mango.png',
+		'mango.png',
+		'orange.png',
+		'orange.png',
 		'pear.png',
 		'pear.png',
 		'pineapple.png',
 		'pineapple.png',
-		'pomegranate-min.jpg',
-		'pomegranate-min.jpg',
-		'strawberry-min.jpg',
-		'strawberry-min.jpg',
-		'watermelon-min.jpg',
-		'watermelon-min.jpg'
+		'strawberry.png',
+		'strawberry.png',
+		'watermelon.png',
+		'watermelon.png'
 	],
 	webDev = [
 		'angular-min.png',
@@ -67,48 +67,48 @@ const Fruits = [
 		'wordpress-min.png'
 	],
 	CardNumber = [
-		'asBlack-min.jpg',
-		'asBlack-min.jpg',
-		'kBlack-min.jpg',
-		'kBlack-min.jpg',
-		'girlBlack-min.jpg',
-		'girlBlack-min.jpg',
-		'sevenBlack-min.jpg',
-		'sevenBlack-min.jpg',
-		'tenBlack-min.jpg',
-		'tenBlack-min.jpg',
-		'asRed-min.jpg',
-		'asRed-min.jpg',
-		'kRed-min.jpg',
-		'kRed-min.jpg',
-		'manRed-min.jpg',
-		'manRed-min.jpg',
-		'sixRed-min.jpg',
-		'sixRed-min.jpg',
-		'twoRed-min.jpg',
-		'twoRed-min.jpg'
+		'cardclub5.svg',
+		'cardclub5.svg',
+		'cardclub6.svg',
+		'cardclub6.svg',
+		'cardclub10.svg',
+		'cardclub10.svg',
+		'cardclubA.svg',
+		'cardclubA.svg',
+		'cardclubQ.svg',
+		'cardclubQ.svg',
+		'carddiamondA.svg',
+		'carddiamondA.svg',
+		'cardheart5.svg',
+		'cardheart5.svg',
+		'cardheart6.svg',
+		'cardheart6.svg',
+		'cardheart10.svg',
+		'cardheart10.svg',
+		'cardheartQ.svg',
+		'cardheartQ.svg'
 	],
 	players = [
-		'cristiano-min.jpg',
-		'cristiano-min.jpg',
-		'messi-min.png',
-		'messi-min.png',
-		'ramos-min.jpg',
-		'ramos-min.jpg',
-		'zlatan-min.jpg',
-		'zlatan-min.jpg',
-		'umtiti-min.jpg',
-		'umtiti-min.jpg',
-		'suarez-min.jpg',
-		'suarez-min.jpg',
-		'rakitic-min.png',
-		'rakitic-min.png',
-		'benzema-min.jpg',
-		'benzema-min.jpg',
-		'benzo-min.jpg',
-		'benzo-min.jpg',
-		'grizman-min.jpg',
-		'grizman-min.jpg'
+		'benzema.png',
+		'benzema.png',
+		'cristiano.png',
+		'cristiano.png',
+		'grizman.png',
+		'grizman.png',
+		'hazard.png',
+		'hazard.png',
+		'iniesta.png',
+		'iniesta.png',
+		'marcelo.png',
+		'marcelo.png',
+		'messi.png',
+		'messi.png',
+		'ramos.png',
+		'ramos.png',
+		'suarez.png',
+		'suarez.png',
+		'zlatan.png',
+		'zlatan.png'
 	];
 LetsGetStarted.addEventListener('click', clearOverlay);
 
@@ -136,10 +136,25 @@ pImagesChoose.forEach((p) => {
 		blocks.forEach((block, index) => {
 			let id = e.target.id;
 
-			if (id == 'Fruits') block.children[1].firstElementChild.src = `images/fruits/${Fruits[index]}`;
-			else if (id == 'webDev') block.children[1].firstElementChild.src = `images/webDev/${webDev[index]}`;
-			else if (id == 'CardNumber') block.children[1].firstElementChild.src = `images/card/${CardNumber[index]}`;
-			else if (id == 'players') block.children[1].firstElementChild.src = `images/players/${players[index]}`;
+			if (id == 'Fruits') {
+				block.children[1].firstElementChild.src = `images/fruits/${Fruits[index]}`;
+				if (block.children[1].firstElementChild.classList.contains('players')) {
+					block.children[1].firstElementChild.classList.remove('players');
+				}
+			} else if (id == 'webDev') {
+				block.children[1].firstElementChild.src = `images/webDev/${webDev[index]}`;
+				if (block.children[1].firstElementChild.classList.contains('players')) {
+					block.children[1].firstElementChild.classList.remove('players');
+				}
+			} else if (id == 'CardNumber') {
+				block.children[1].firstElementChild.src = `images/card/${CardNumber[index]}`;
+				if (block.children[1].firstElementChild.classList.contains('players')) {
+					block.children[1].firstElementChild.classList.remove('players');
+				}
+			} else if (id == 'players') {
+				block.children[1].firstElementChild.src = `images/players/${players[index]}`;
+				block.children[1].firstElementChild.classList.add('players');
+			}
 
 			overlayImage.style.display = 'none';
 			imgBlocks.classList.add('no-clicking');
