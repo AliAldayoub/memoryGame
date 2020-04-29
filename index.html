@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="pageLoad()">
+    <audio id="success" src="success.wav" preload="auto"></audio>
+    <audio id="wrong" src="wrong.wav" preload="auto"></audio>
+    <audio id="bgSound" src="bgSound.mp3" preload="auto" loop></audio>
+    <div class="imgGallery"></div>
     <div class="overlay">
         <input type="text" placeholder="Enter Your Name">
         <button>Lets Get Start</button>
@@ -214,9 +218,7 @@
         </div>
     </div>
 
-    <audio id="success" src="success.wav" preload="auto"></audio>
-    <audio id="wrong" src="wrong.wav" preload="auto"></audio>
-    <audio id="bgSound" src="bgSound.mp3" preload="auto" loop></audio>
+
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/main.js"></script>
 </body>
