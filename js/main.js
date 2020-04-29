@@ -110,10 +110,6 @@ const Fruits = [
 		'grizman.jpg',
 		'grizman.jpg'
 	];
-creatImgFruits();
-creatImgPlayer();
-creatImgCardNum();
-
 LetsGetStarted.addEventListener('click', clearOverlay);
 
 startGameButton.addEventListener('click', startGame);
@@ -373,26 +369,5 @@ function checkPlayerAllow() {
 		let con = confirm('We Are Sorry Maximmum Player Is 5 Do You Want To Reload The Page');
 		if (con) location.reload();
 		else return;
-	}
-}
-function creatImgFruits() {
-	for (let i = 0; i < Fruits.length; i++) {
-		const img = document.createElement('img');
-		img.src = `images/${Fruits[i]}`;
-		imgGallery.appendChild(img);
-	}
-}
-function creatImgPlayer() {
-	for (let i = 0; i < CardNumber.length; i++) {
-		const img = document.createElement('img');
-		img.src = `images/${CardNumber[i]}`;
-		imgGallery.appendChild(img);
-	}
-}
-function creatImgCardNum() {
-	for (let i = 0; i < players.length; i++) {
-		const img = document.createElement('img');
-		img.src = `images/${players[i]}`;
-		imgGallery.appendChild(img);
 	}
 }
