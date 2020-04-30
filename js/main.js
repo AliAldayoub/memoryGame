@@ -110,6 +110,7 @@ const Fruits = [
 		'zlatan.png',
 		'zlatan.png'
 	];
+
 LetsGetStarted.addEventListener('click', clearOverlay);
 
 startGameButton.addEventListener('click', startGame);
@@ -129,6 +130,12 @@ newPlayer.addEventListener('click', function() {
 	nameInput.placeholder = 'Enter Your Name And Press Reset please';
 
 	clearInterval(interval);
+});
+document.querySelector('.overlayImage .close').addEventListener('click', function() {
+	overlayImage.style.display = 'none';
+});
+document.querySelector('.overlay .close').addEventListener('click', function() {
+	if (document.querySelector('.note').style.display == 'block') overlay.style.display = 'none';
 });
 
 pImagesChoose.forEach((p) => {
